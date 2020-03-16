@@ -1,0 +1,20 @@
+@import '../../../assets/sass/common';
+
+.navbar {
+  .breadcrumbs-icon-right {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+  .v-list {
+    &.theme--dark {
+      a {
+        color: $color-text-dark !important;
+      }
+    }
+    &.theme--light {
+      a {
+        color: $color-text-light !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../assets/sass/common';
+
+.login {
+  .v-card {
+    @extend .app-card;
+    @extend .app-card-primary;
+  }
+  .app-action {
+    width: 100%;
+  }
+}
