@@ -4,7 +4,8 @@ const mixin = {
       localStorage.setItem(key, JSON.stringify(data))
     },
     getFromLocalStorage (key) {
-      return JSON.parse(localStorage.getItem(key)) || null
+      let value = JSON.parse(localStorage.getItem(key)) || null
+      return value
     },
     removeFromLocalStorage (key) {
       localStorage.removeItem(key)

@@ -21,7 +21,7 @@ export default {
           src: 'https://www.pexels.com/search/tiger'
         },
         {
-          icon: 'dashboard',
+          icon: 'shopping_cart',
           title: 'Lion',
           src: 'https://www.pexels.com/search/lion'
         }

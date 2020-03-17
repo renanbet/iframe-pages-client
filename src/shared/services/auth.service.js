@@ -9,20 +9,18 @@ class AuthService {
     return AuthService.instance
   }
 
-  constructor () {
-    this.user = JSON.parse(localStorage.getItem('user')) || null
-  }
-
   isAuthenticated () {
     return this.getUser() !== null
   }
 
   getRole () {
-    return this.user ? this.user.role : ''
+    const user = JSON.parse(localStorage.getItem('user')) || null
+    return user ? user.role : ''
   }
 
   getUser () {
-    return this.user
+    const user = JSON.parse(localStorage.getItem('user')) || null
+    return user
   }
 }
 
