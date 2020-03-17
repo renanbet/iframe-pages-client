@@ -1,22 +1,29 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import Login from '@/components/login'
-import Home from '@/components/home'
+import VueRouter from 'vue-router'
+import AuthService from '@/shared/services/auth.service'
+import routes from './routes'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
-  mode: 'history',
-  routes: [
-    {
-      path: '/',
-      name: 'Login',
-      component: Login
-    },
-    {
-      path: '/home',
-      name: 'Home',
-      component: Home
-    }
-  ]
+const authService = AuthService()
+const router = new VueRouter({ mode: 'history', routes })
+
+router.beforeEach((to, from, next) => {
+  if (!to.name) {
+    return next('/')
+  }
+
+  let roleName = authService.getRole()
+
+  if (to.meta.roles && to.meta.roles.indexOf(roleName) === -1) {
+    return next('/')
+  }
+
+  if (to.meta.requiresAuth && !authService.isAuthenticated()) {
+    return next('/')
+  }
+
+  next()
 })
+
+export default router
