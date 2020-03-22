@@ -25,6 +25,18 @@ export default {
         role: this.username,
         fullName: this.username
       }
+      user.menu = [
+        {
+          icon: 'dashboard',
+          title: 'Tiger',
+          src: 'https://www.pexels.com/search/tiger'
+        },
+        {
+          icon: 'shopping_cart',
+          title: 'Lion',
+          src: 'https://www.pexels.com/search/lion'
+        }
+      ]
       this.saveUser(user)
       let home = this.username === 'admin' ? '/admin' : '/home'
       this.$router.push(home)
