@@ -2,7 +2,8 @@
   <navbar :title="title"
     :items="items"
     :user="user"
-    v-on:darken="darken"></navbar>
+    v-on:darken="darken"
+    @clickMenu="changePage"></navbar>
   <v-content>
     <router-view/>
   </v-content>

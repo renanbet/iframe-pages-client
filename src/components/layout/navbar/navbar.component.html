@@ -14,7 +14,7 @@
         value="true"
         v-for="(item, i) in items"
         :key="i"
-        @click="loadReport(item)"
+        @click="clickMenuItem(item)"
       >
         <v-list-tile-action v-bind:class="{'app-link-light': !darken, 'app-link-dark': darken}">
           <v-icon v-if="item.icon" v-html="item.icon"></v-icon>

@@ -39,6 +39,7 @@ export default {
       ]
       this.saveUser(user)
       let home = this.username === 'admin' ? '/admin' : '/home'
+      
       this.$router.push(home)
     }
   }

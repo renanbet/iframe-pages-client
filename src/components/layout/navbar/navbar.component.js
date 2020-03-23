@@ -1,5 +1,3 @@
-import { mapGetters, mapActions } from 'vuex'
-
 export default {
   name: 'navbar',
   components: {},
@@ -50,18 +48,8 @@ export default {
     this.showNavbar()
   },
   methods: {
-    ...mapGetters([
-      'getCurrentReport'
-    ]),
-    ...mapActions([
-      'setCurrentReport'
-    ]),
-    loadReport (item) {
-      let report = {
-        title: item.title,
-        src: item.src
-      }
-      this.setCurrentReport(report)
+    clickMenuItem (item) {
+      this.$emit('clickMenu', item)
     },
     showNavbar () {
       const routeName = this.$router.currentRoute.name
@@ -97,7 +85,6 @@ export default {
       }
 
       if (/Login/.test(from.name)) {
-        this.loadReport(this.items[0])
         this.show = true
       }
 
