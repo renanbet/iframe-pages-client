@@ -20,7 +20,12 @@ export default {
     }
   },
   computed: {},
-  mounted () {},
+  mounted () {
+    let user = this.getUser()
+    if (user) {
+      this.show = true
+    }
+  },
   methods: {
     ...mapGetters([
       'getCurrentReport'
@@ -42,6 +47,10 @@ export default {
       }
       this.setCurrentReport(report)
       this.leftMenu = !this.leftMenu
+    },
+    logout () {
+      this.removeUser()
+      this.$router.push('/')
     }
   },
   watch: {

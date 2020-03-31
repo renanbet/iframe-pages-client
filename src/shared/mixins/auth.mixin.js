@@ -14,7 +14,7 @@ const mixin = {
     },
     getUser () {
       const user = this.getFromLocalStorage('user')
-      return user ? user : {}
+      return user ? user : null
     },
     getFullName () {
       const user = this.getFromLocalStorage('user')
