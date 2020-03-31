@@ -12,8 +12,10 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
+    "vue-friendly-iframe": "^0.17.0",
     "vue-router": "^3.0.3",
-    "vuetify": "^2.2.11"
+    "vuetify": "^2.2.11",
+    "vuex": "^2.2.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",

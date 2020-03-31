@@ -5,7 +5,7 @@
     color="blue-grey"
     dark
   >
-    <v-app-bar-nav-icon @click.stop="leftMenu = !leftMenu" />
+    <v-app-bar-nav-icon @click.stop="openLeftMenu" />
     <v-toolbar-title>Toolbar</v-toolbar-title>
     <v-spacer />
     <v-app-bar-nav-icon @click.stop="rightMenu = !rightMenu" />
@@ -16,9 +16,9 @@
     fixed
     temporary>
     <v-list dense>
-      <v-list-item>
+      <v-list-item v-for="item in menuItems" :key="item.title" @click="clickItem(item)">
         <v-list-item-content>
-          <v-list-item-title>report</v-list-item-title>
+          <v-list-item-title>{{item.title}}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>

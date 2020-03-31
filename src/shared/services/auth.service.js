@@ -17,7 +17,7 @@ class AuthService {
 
   getFirstRole () {
     let user = this.getUser()
-    return user ? user.roles[0] : ''
+    return user ? user.role : ''
   }
 
   getUser () {
