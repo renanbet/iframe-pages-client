@@ -1,7 +1,9 @@
 .report {
   height: calc(100vh - 120px);
-  .vue-friendly-iframe iframe {
+  .vue-friendly-iframe {
+    iframe {
       width: 100%;
       height: calc(100vh - 120px);
+    }
   }
 }
