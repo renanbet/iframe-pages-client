@@ -15,7 +15,8 @@ export default {
       rightMenu: false,
       leftMenu: false,
       company: 'Hangar Data',
-      menuItems: []
+      menuItems: [],
+      show: false
     }
   },
   computed: {},
@@ -40,6 +41,18 @@ export default {
         src: item.src
       }
       this.setCurrentReport(report)
+      this.leftMenu = !this.leftMenu
+    }
+  },
+  watch: {
+    $route: function (to, from) {
+      if (/login/.test(to.name)) {
+        this.show = false
+      }
+
+      if (/login/.test(from.name)) {
+        this.show = true
+      }
     }
   }
 }
