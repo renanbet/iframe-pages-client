@@ -6,10 +6,9 @@ export default {
   },
   data () {
     return {
-      drawer: null,
-      drawerRight: null,
-      right: false,
-      left: false
+      rightMenu: false,
+      leftMenu: false,
+      company: 'Hangar Data'
     }
   },
   computed: {
