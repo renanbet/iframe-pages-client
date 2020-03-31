@@ -1,0 +1,80 @@
+$color-text-dark: #FFFFFF;
+$color-text-light: #424242;
+$color-title-light:  rgba(0,0,0,.87);
+$color-title-dark: #FFFFFF;
+$goal-color: #E6E6E6;
+$expense-color: red;
+$income-color: green;
+$goal-color-light: #04B431;
+$expense-color-light: #FA5858;
+$income-color-light: #04B431;
+$easy-color: gray;
+$easy-color-light: #BDBDBD;
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.app-color-primary {
+  color: #000000 !important;
+}
+.app-card {
+  border-radius: 7px !important;
+}
+.app-navbar {
+  &.theme--dark {
+    background-color: #424242 !important;
+  }
+  &.theme--light {
+    background-color: #FFFFFF !important;
+  }
+}
+.app-primary {
+  background-color: #424242 !important;
+}
+.app-action {
+  background-color: #FFD600 !important;
+  color: #000 !important;
+}
+.app-info {
+  background-color: #616161 !important;
+  color: #FFF !important;
+}
+.app-card-primary {
+  &.theme--dark {
+    .v-toolbar {
+      background-color: #424242 !important;
+    }
+  }
+  &.theme--light {
+    .v-toolbar {
+      background-color: #424242 !important;
+    }
+  }
+}
+.app-income-value {
+  font-size: 16px;
+  color: $income-color;
+}
+.app-expense-value {
+  font-size: 16px;
+  color: $expense-color;
+}
+.app-info-value {
+  font-size: 16px;
+}
+.app-goal-value {
+  background-color: $goal-color !important;
+  color: #000 !important;
+  font-size: 16px;
+}
+.app-link-light {
+  text-decoration: none;
+  color: $color-title-light !important;
+}
+.app-link-dark {
+  text-decoration: none;
+  color: $color-title-dark !important;
+}

@@ -1,25 +1,31 @@
-<section class="login">
-  <v-container fluid fill-height>
-    <v-layout align-center justify-center>
-      <v-flex xs12 sm8 md4>
-        <v-card class="elevation-4">
-          <v-toolbar>
-            <v-toolbar-title>Login</v-toolbar-title>
-            <v-spacer></v-spacer>
-          </v-toolbar>
-          <v-card-text>
-            <v-form>
-              <v-text-field v-model="username" prepend-icon="person" name="login" label="Login" type="text"></v-text-field>
-              <v-text-field v-model="password" id="password" prepend-icon="lock" name="password" label="Password" type="password"></v-text-field>
-            </v-form>
-          </v-card-text>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn @click="login" class="app-action">Login</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-container>
-</section>
+<v-container fluid fill-height>
+  <v-layout align-center justify-center>
+    <v-flex xs12 sm8 md4>
+        <v-col
+        cols="12"
+        sm="8"
+        md="4"
+      >
+      <v-card class="elevation-4">
+        <v-toolbar
+        color="blue-grey"
+        dark>
+          <v-toolbar-title>Login</v-toolbar-title>
+          <v-spacer></v-spacer>
+        </v-toolbar>
+        <v-card-text>
+          <v-form>
+            <v-text-field v-model="username" prepend-icon="person" name="login" label="Login" type="text"></v-text-field>
+            <v-text-field v-model="password" id="password" prepend-icon="lock" name="password" label="Password" type="password"></v-text-field>
+          </v-form>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn @click="login" class="app-action">Login</v-btn>
+        </v-card-actions>
+      </v-card>
+      </v-col>
+    </v-flex>
+  </v-layout>
+</v-container>
 
