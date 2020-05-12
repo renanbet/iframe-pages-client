@@ -1,4 +1,4 @@
-# hangar-client
+# Vuejs app
 
 > A Vue.js project
 
