@@ -13,7 +13,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "chart.js": "^2.7.3",
     "dateformat": "^3.0.3",
     "v-money": "^0.8.1",
